@@ -1,0 +1,151 @@
+@import url('https://fonts.cdnfonts.com/css/norse');
+
+body {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+}
+
+#header {
+    font-family: 'Norse', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 5em;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, .5);
+    margin-top: 100px;
+}
+
+#attribution {
+    color: white;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT',
+        Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 10px;
+}
+
+#sidebar {
+    background-image: url(images/foliage.jpg);
+    display: flex;
+    min-width: 30%;
+    flex-direction: column;
+    background-size: cover;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+#header img {
+    height: 1.2em;
+    vertical-align: top;
+}
+
+div {
+    display: block;
+}
+
+#content {
+    font-family: 'Gill Sans', 'Gill Sans MT',
+        Calibri, 'Trebuchet MS', sans-serif;
+    background-color: lightgray;
+}
+
+#text {
+    font-weight: bold;
+    padding: 50px 100px 30px 40px;
+}
+
+#text p {
+    max-width: 80%;
+}
+
+#signin {
+    box-shadow: 0px 3px 4px rgb(177, 177, 177);
+    padding: 0px 150px 20px 40px;
+    background-color: white;
+}
+
+#form div input {
+    width: 250px;
+    border-color: lightgray;
+    border-width: 1px;
+}
+
+#form div label {
+    font-size: 13px;
+    font-weight: lighter;
+}
+
+.req {
+    font-size: 10px;
+}
+
+#form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 550px;
+}
+
+.bold {
+    font-weight: bold;
+    font-size: 28px;
+}
+
+#form div {
+    display: flex;
+    flex-direction: column;
+}
+
+#signin p {
+    padding-top: 30px;
+}
+
+#create {
+    padding: 30px 100px 30px 40px;
+}
+
+#create button {
+    background-color: #596D48;
+    padding: 10px 30px 10px 30px;
+    border-width: 0px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 15px;
+    box-shadow: 1px 3px 4px rgb(177, 177, 177);
+}
+
+#create p {
+    font-size: 13px;
+}
+
+a {
+    color: #596D48;
+}
+
+#signin input:invalid {
+    border-color: red;
+}
+
+@media (max-width: 1000px) {
+    body {
+        display: block;
+    }
+
+    #sidebar {
+        height: 230px;
+        max-width: 100%;
+    }
+
+    #text {
+        max-width: 100%;
+    }
+
+    #form {
+        display: block;
+    }
+
+    #form input {
+        margin-bottom: 20px;
+    }
+}

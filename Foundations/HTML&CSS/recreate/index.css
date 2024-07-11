@@ -1,0 +1,309 @@
+@import 'meyer-reset.css';
+
+
+/* SETUP */
+* {
+    box-sizing: border-box;
+    font-family: 'Hero New', sans-serif;
+}
+
+picture {
+    display: block;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+a {
+    /* display: block; */
+    color: inherit;
+    text-decoration: none;
+}
+
+p a,
+li a,
+h2 a,
+h3 a {
+    /* display: block;  */
+    color: var(--bcolor);
+    text-decoration: underline;
+}
+
+/* SETTINGS */
+html{
+    /* custom properties (variables)*/
+    --bcolor: #3882f6;
+    --black: #333;
+    --cdark: navy;
+    --light: lighterblue;
+}
+
+/* DEV STYLES */
+/* body * {
+    border: 1px solid blue;
+    padding: 2px;
+} */
+
+/* STRUCTURE */
+body {
+    display: flex;
+    flex-direction: column;
+    /* border: 10px solid blue; */
+    min-height: 100vh
+}
+
+main {
+    flex-grow: 1;
+    /* border: 10px solid pink; */
+}
+
+inner-column {
+    display: block;
+    /* border: 4px solid orange; */
+    /* padding: 10vh; */
+    width: 98%;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+@media (max-width: 1200px){
+    inner-column{
+        padding-left:10vh;
+        padding-right:10vh;
+    }
+}
+header inner-column{
+    padding-top: 10px;
+}
+
+footer inner-column{
+    padding-bottom: 10px;
+}
+
+/* TYPOGRAPHY */
+.loud-voice {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 0.9;
+}
+
+@media (min-width: 800px){
+    .loud-voice {
+        font-size: 50px;
+    }
+}
+
+.calm-voice{
+    font-size: 1rem;
+    line-height: 1.3
+}
+
+/* COMPONENTS */
+.button {
+    background-color: var(--bcolor);
+    color: white;
+    padding: 0.5em 1em;
+    font-size: 1rem;
+    display: inline-block;
+    border-radius: 6px;
+}
+
+/* MODULES */
+graphic-diptych{
+    display: block; 
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 80px;
+}
+
+/* graphic-diptych picture{
+
+} */
+
+graphic-diptych text-content{
+    display: block;
+}
+
+graphic-diptych text-content p{
+    margin-top: 10px;
+}
+
+graphic-diptych text-content .button{
+    margin-top: 20px;
+}
+
+
+@media (min-width: 700px){
+    graphic-diptych{
+        flex-direction: row-reverse;
+    }
+    graphic-diptych :is(text-content, picture){
+        flex-basis: 50%;
+        /* border: 1px solid black; */
+    }
+}
+
+header inner-column{
+    padding-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+}
+
+header inner-column h1 {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+header inner-column h2 a{
+    text-decoration: none;
+    color: #E5E7Eb;
+    font-size: 0.8em;
+    margin-left: 15px;
+}
+
+/* 
+header,
+footer,
+main {
+    border: 4px solid red;
+}
+
+section {
+    border: 4px solid lime;
+} */
+
+
+.header{
+    background-color: #1F2937;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-top: 5px;
+}
+
+.welcome {
+    background-color: #1F2937;
+    color: white;
+}
+
+products-grid .product-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-gap: 1em;
+}
+
+products-grid{
+    display: block;
+    text-align: center;
+}
+
+product-card{
+    display: block; 
+}
+
+footer{
+    background-color: #1F2937;
+    color: white;
+    font-size: 10px
+}
+
+footer inner-column{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+.quote{
+    background-color: #e5e6ec;
+    font-style: italic;
+}
+
+/* talking-point{
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+talking-point h1{
+    font-size: 2em;
+    /* text-align: center; */
+    margin-bottom: 20px;
+    /* max-width: 800px; */
+    font-weight: lighter;
+}
+
+talking-point p{
+    text-align: right;
+    font-weight: bold;
+}
+
+
+sign-up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color:  #3882f6; */
+    flex-direction: row;
+    gap: 80px;
+    background-color: #3882f6;
+    padding: 30px 10px 30px 10px;
+    /* align-self: flex-start; */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+
+/* .signup{
+    border-color: black; 
+    background-color:  #3882f6;
+} */
+
+sign-up text-content{
+    display: block;
+}
+
+sign-up text-content h1{
+    margin-bottom: 3px;
+    font-weight: bold;
+    border-width: thick;
+    border-color: black;
+    color: white;
+}
+
+sign-up text-content p{
+    color: #e5e6ec;
+    font-size: 12px;
+}
+
+.button1{
+    /* border-color: black; */
+    border-width: thin; 
+
+    background-color:  #3882f6;
+    border-style: solid;
+    border-color: white;
+    /* border-color: white; */
+    color: white;
+    padding: 0.5em 1em;
+    font-size: 1rem;
+    display: inline-block;
+    border-radius: 6px;
+    font-size: 13px
+}
+
+@media (min-width: 900px){
+    sign-up{
+        width: 800px;        /* border: 1px solid black; */
+    }
+}
