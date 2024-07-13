@@ -1,0 +1,154 @@
+@import "meyer-reset.css";
+
+* {
+    --turuoise: #66FCF1;
+    --default: #C5C6C7;
+    --darkerTurq: #45A29E;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+
+/* HEADER */
+
+#header {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+#header h1 {
+    font-size: 80px;
+    padding-bottom: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 3px;
+    color: var(--turuoise);
+}
+
+#header h2 {
+    font-family: monospace;
+    padding-bottom: 20px;
+}
+
+#header button {
+    width: 200px;
+    height: auto;
+    font-size: 17px;
+    color: white;
+    background-color: black;
+    border: none;
+    border: 2px solid var(--turuoise);
+    border-radius: 10px;
+}
+
+/* Library Layout */
+
+#library {
+    display: grid;
+    justify-content: center;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, 30ch);
+}
+
+/* Book Layout */
+
+.bookCard h1 {
+    font-size: 20px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    line-height: 27px;
+}
+
+.bookCard h2 {
+    padding-top: 0px;
+    font-size: 15px;
+    padding-bottom: 20px;
+}
+
+.bookCard h3 {
+    font-size: 20px;
+    font-weight: thin;
+    padding-bottom: 15px;
+    flex: 1;
+}
+
+.bookCard {
+    padding: 20px;
+    width: 225px;
+    text-align: center;
+    border: 3px solid var(--darkerTurq);
+    border-radius: 10px;
+    background-color: var(--default);
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 60% 25%;
+    gap: 5px;
+    justify-content: center;
+}
+
+.buttons button {
+    border-radius: 3px;
+    border: none;
+    background-color: white;
+    border: 2px solid var(--darkerTurq);
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.remove::before {
+    content: url(./img/delete.svg);
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* POPUP */
+#popUp {
+    display: none;
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    color: black;
+    top: 50%;
+    left: 50%;
+    translate: -50% -250px;
+    border-radius: 20px;
+    border: 3px solid var(--darkerTurq);
+}
+
+#popUp h1 {
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+#inputs input {
+    margin-top: 15px;
+    height: 25px;
+    width: 200px;
+}
+
+#check {
+    margin-top: 25px;
+}
+
+#submit {
+    margin-top: 30px;
+}
+
+
+
+/* Image Icons */

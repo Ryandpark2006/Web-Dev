@@ -11,10 +11,25 @@
 
 <body>
     <div id="header">
-        <h1>Ryan's Library</h1>
-        <button>Add Book</button>
+        <h1>LIBRARY</h1>
+        <h2>By Ryan Park</h2>
+        <button type="button" onclick="showForm()" class="newBook">New Book</button>
     </div>
-    <div id="library">
+    <div id="library"></div>
+    <div id="popUp">
+        <h1>Create a New Book</h1>
+        <form id="form">
+            <div id="inputs">
+                <input type="text" id="title" name="title" placeHolder="Title"><br>
+                <input type="text" id="author" placeholder="Author"><br>
+                <input type="number" id="page" placeholder="# of Pages"><br>
+            </div>
+            <div id="check">
+                <input type="checkbox" id="read" value="no">
+                <label for="read"> Have you read it?</label><br>
+            </div>
+            <button type="submit" id="submit" value="submit">Create Book</button>
+        </form>
     </div>
 </body>
 
