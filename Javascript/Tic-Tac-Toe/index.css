@@ -1,0 +1,42 @@
+.board {
+    display: grid;
+    height: 400px;
+    width: 400px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    border: 1px solid black;
+    gap: 2px;
+    padding: 2px;
+    background-color: yellow;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cell {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.7rem;
+    border: 1px solid grey;
+    background: lightyellow;
+    cursor: pointer;
+}
+
+
+.container {
+    text-align: center;
+}
+
+.playerText,
+.buttons {
+    padding-top: 20px;
+}
+
+.turn {
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 50px;
+}
